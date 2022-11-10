@@ -7,11 +7,12 @@ footer {
     background-image: url(../img/pastel.jpeg);
     background-size: 150%;
     padding: 0px;
-    position: absolute;
+    margin-top: 30px;
+    position: relative;
     bottom: 0;
 
     .linkMenu {
-        background-color: rgba($color: #ffffff, $alpha: 0.85);
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
         width: 100%;
         margin: 3px;
         display: flex;
