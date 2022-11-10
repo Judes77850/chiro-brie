@@ -1,0 +1,37 @@
+footer {
+    color: $color-1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-image: url(../img/pastel.jpeg);
+    background-size: 150%;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+
+    .linkMenu {
+        background-color: rgba($color: #ffffff, $alpha: 0.85);
+        width: 100%;
+        margin: 3px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        a {
+            color: $color-1;
+            text-decoration: none;
+            display: flex;
+            padding: 10px;
+            margin: 5px 10px 5px 10px;
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            transition-duration: 200ms;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            transition-duration: 300ms;
+        }
+    }
+}

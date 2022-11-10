@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formulaire de contact</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("MK-TS7pXp5JJyRB91");
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          this.contact_number.value = (Math.random() * 100000) | 0;
+          emailjs.sendForm("service_duwdtg9", "template_cfu7i59", this).then(
+            function () {
+              console.log("SUCCESS!");
+              alert("Votre demande a bien été transmise");
+              location.reload();
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert(
+                "Quelque chose ne s'est pas passé comme prévu, vous pouvez contacter Julien par email ; julien.desaindes@gmail.com"
+              );
+            }
+          );
+        });
+    };
+  </script>
+  <script src="../js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/b7690d0649.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../sass/reset.scss" />
+  <link rel="stylesheet" href="../css/main.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="headerTop">
+      <h1>Gwenaëlle Billot D.C</h1>
+      <span class="bottomPart">
+        <span>
+          <p>CHIROPRACTEUR</p>
+          <p>Diplômée de l'IFEC</p>
+          <p>Soins du dos et des articulations</p>
+        </span>
+        <span>
+          <img class="chiroLogo" src="/img/logo-chiropratique.png">
+        </span>
+      </span>
+    </div>
+
+    <div id="menu">
+      <div class="linkMenu">
+        <a href="../index.html">Accueil</a>
+        <a href="index.html">La chiropratique</a>
+        <a href="index.html">Consultation</a>
+        <a href="index.html">Remboursement</a>
+        <a href="index.html">Le cabinet</a>
+        <a href="../html/contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  <form id="contact-form">
+    <input type="hidden" name="contact_number" required />
+    <label>Name</label>
+    <input type="text" name="user_name" placeholder="Dark Vador" required />
+    <label>Email</label>
+    <input type="email" name="user_email" placeholder="xXoOoXx@etoilenoire.fr" required />
+    <label>Message</label>
+    <textarea name="message"></textarea>
+    <input class="send" type="submit" value="Envoyer" />
+  </form>
+  <footer>
+    <div class="linkMenu">
+      <a href="#menu">Haut de page</a>
+      <a href="/html/contact.html">Formulaire de contact</a>
+      <a href="/html/contact.html">Venir au cabinet</a>
+    </div>
+  </footer>
+</body>
+
+</html>
