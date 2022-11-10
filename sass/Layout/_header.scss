@@ -1,43 +1,51 @@
 header {
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 20px;
     width: 100%;
+    background-image: url(../img/pastel.jpeg);
+    background-size: 120%;
     .headerTop {
         color: $color-1;
+        background-color: rgba($color: #ffffff, $alpha: 0.70);
         margin: auto;
         text-align: center;
         border: double 3px;
         border-color: $color-1;
         padding: 15px;
         font-family: Arial, Helvetica, sans-serif;
+        h1{
+            margin: 0px;
+        }
         p {
-            margin: 5px;
+            margin: 3px;
         }
     }
     .bottomPart {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     .chiroLogo {
-        width: 110px;
-        margin-left: 30px;
+        width: 120px;
+        margin-left: 40px;
+        margin-top: 0px;
     }
 }
 #menuDesk {
     display: flex;
     color: $color-1;
     flex-direction: row;
-    background-image: url(../img/pastel.jpeg);
     background-size: 150%;
     padding: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-top: 30px;
     .linkMenu {
-        background-color: rgba($color: #ffffff, $alpha: 0.85);
+        background-color: rgba($color: #ffffff, $alpha: 0.70);
         width: 100%;
-        margin: 3px;
+        margin: 0px;
+        margin-top: 0px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -60,55 +68,23 @@ header {
 }
 
 #menuBis {
-    color: $color-1;
     display: none;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 454px;
-    background-image: url(../img/pastel.jpeg);
-    background-size: 100%;
-    padding: 0px;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    .linkMenu {
-        background-color: rgba($color: #ffffff, $alpha: 0.85);
-        width: auto;
-        margin: auto;
-        margin: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        a {
-            color: $color-1;
-            text-decoration: none;
-            padding: 5px;
-            margin: 0px 10px 0px 10px;
-            list-style: none;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 24px;
-            transition-duration: 200ms;
-        }
-        a:hover {
-            transform: scale(1.1);
-            transition-duration: 300ms;
-        }
-        i {
-            background-image: none;
-            width: 45px;
-            padding: 5px;
-            margin: 0px 10px 0px 10px;
-        }
-    }
 
 }
 
 @media only screen and (max-width: 800px) {
+    .bottomPart {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .chiroLogo {
+        width: 10px;
+        height: auto;
+        margin-left: 80px;
+    }
     .headerTop{
-        width: 70%;
+        width: 80%;
         height: auto;
         h1{
             font-size: 25px;
@@ -126,31 +102,31 @@ header {
         justify-content: center;
         align-items: center;
         width: 100%;
-        background-image: url(../img/pastel.jpeg);
         background-size: 100%;
         padding: 0px;
         margin: auto;
-        margin-bottom: 30px;
-        margin-top: 30px;
+        margin-bottom: 0px;
+        margin-top: 10px;
         .linkMenu {
-            background-color: rgba($color: #ffffff, $alpha: 0.85);
+            background-color: rgba($color: #ffffff, $alpha: 0.7);
             width: 100%;
             margin: auto;
-            margin: 3px;
+            margin: 0px;
             display: flex;
             border-radius: 3px;
             justify-content: center;
             align-items: center;
             flex-wrap: nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
             a {
+                width: 40%;
+                text-align: center;
                 color: $color-1;
                 text-decoration: none;
                 padding: 5px;
-                margin: 0px 10px 0px 10px;
                 list-style: none;
                 font-family: Arial, Helvetica, sans-serif;
-                font-size: 24px;
+                font-size: 18px;
                 transition-duration: 200ms;
             }
             a:hover {
@@ -159,9 +135,8 @@ header {
             }
             i {
                 background-image: none;
-                width: 45px;
-                padding: 5px;
-                margin: 0px 10px 0px 10px;
+                text-align: center;
+                font-size: 30px;
             }
         }
 
