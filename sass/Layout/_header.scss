@@ -44,7 +44,7 @@ header {
     .linkMenu {
         background-color: rgba($color: #ffffff, $alpha: 0.70);
         width: 100%;
-        margin: 0px;
+        margin: 3px;
         margin-top: 0px;
         display: flex;
         flex-wrap: wrap;
@@ -61,8 +61,10 @@ header {
             transition-duration: 200ms;
         }
         a:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition-duration: 300ms;
+            color: rgb(215, 143, 222) ;
+            text-shadow: 1px 1px 5px lightgrey;
         }
     }
 }
